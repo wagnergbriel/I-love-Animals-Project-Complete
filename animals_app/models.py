@@ -1,5 +1,5 @@
 from django.db import models
-import pyUFbr
+from pyUFbr.baseuf import ufbr
 import uuid
 
 class Shelter(models.Model):
@@ -9,29 +9,30 @@ class Shelter(models.Model):
         cnpj = 'CNPJ'
     
     """ class which return organizacion struct of identifier"""
-    class PersonalIdentifier(models.Field):
-        def __init__(self, connection):
+    class PersonalIdentifierField(models.Field):
+        def __init__(self, connection, *args, **kwargs):
             self.connection = connection
+            super().__init__(*args, **kwargs)
         
         def db_type(self, connection):
-            if connection == 'CPF':
+            if self.connection == 'CPF':
                 return 'char(9)'
-            if connection == 'CNPJ':
+            if self.connection == 'CNPJ':
                 return 'char(12)'
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     animals = models.ForeignKey('Animals' ,on_delete=models.PROTECT)
     name = models.CharField(max_length=200)
-    phone_number = models.IntegerField(max_length=14)
+    phone_number = models.CharField(max_length=14)
     email = models.EmailField()
     password = models.CharField(max_length=12)
-    type_personal_identifier = models.CharField(choices=TypePersonalIdentifier.choices)
-    personal_identifier = PersonalIdentifier(type_personal_identifier)
+    type_personal_identifier = models.CharField(max_length=50, choices=TypePersonalIdentifier.choices)
+    personal_identifier = PersonalIdentifierField(type_personal_identifier)
     address = models.CharField(max_length=200)
     number_address = models.IntegerField()
     cep = models.CharField(max_length=8)
-    state = models.CharField(choices=pyUFbr.list_uf)
-    city = models.CharField(choices=pyUFbr.list_cidades(state))
+    state = models.CharField(max_length=50, choices=ufbr.list_uf)
+    city = models.CharField(max_length=50, choices=ufbr.list_cidades(state))
     district = models.CharField(max_length=200)
     complement = models.CharField(max_length=500)
     
@@ -46,7 +47,7 @@ class Animals(models.Model):
         DOG = 'dog'
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    type_animal = models.CharField(choices=TypeAnimals.choices)
+    type_animal = models.CharField(max_length=50, choices=TypeAnimals.choices)
     name = models.CharField(max_length=200)
     description = models.TextField()
     intake_date = models.DateTimeField(auto_now_add=True)
