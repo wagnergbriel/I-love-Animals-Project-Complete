@@ -19,7 +19,7 @@ class Shelter(models.Model):
             if connection == 'CNPJ':
                 return 'char(12)'
 
-
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     animals = models.ForeignKey('Animals' ,on_delete=models.PROTECT)
     name = models.CharField(max_length=200)
     phone_number = models.IntegerField(max_length=14)
@@ -45,6 +45,7 @@ class Animals(models.Model):
         CAT = 'cat'
         DOG = 'dog'
     
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     type_animal = models.CharField(choices=TypeAnimals.choices)
     name = models.CharField(max_length=200)
     description = models.TextField()
