@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Shelter, Animals
 
-# Register your models here.
+admin.site.register(Shelter)
+admin.site.register(Animals)
