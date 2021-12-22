@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Shelter, Animals
+from .models import Colaborador, Animais
 
-admin.site.register(Shelter)
-admin.site.register(Animals)
+admin.site.register(Colaborador)
+admin.site.register(Animais)
