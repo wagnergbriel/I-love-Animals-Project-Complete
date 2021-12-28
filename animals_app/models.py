@@ -12,7 +12,6 @@ class Colaborador(models.Model):
 
     """Campos da Classe colaborador"""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    animais = models.ForeignKey("Animais", on_delete=models.PROTECT)
     nome = models.CharField(max_length=200)
     numero_celular = models.CharField(max_length=14)
     email = models.EmailField()
@@ -32,7 +31,7 @@ class Colaborador(models.Model):
     complemento = models.CharField(max_length=500)
 
     def __str__(self):
-        return self.name
+        return self.nome
 
 
 class Animais(models.Model):
@@ -44,13 +43,14 @@ class Animais(models.Model):
 
     """Caampos da Classe animais"""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    colaborador = models.ForeignKey("Colaborador", on_delete=models.PROTECT)
     tipo_animal = models.CharField(max_length=50, choices=TipoAnimais.choices)
     nome = models.CharField(max_length=200)
     descricao = models.TextField()
     data_de_entrada = models.DateTimeField(auto_now_add=True)
-    foto_animal = models.ImageField(height_field=200, width_field=200)
+    foto_animal = models.ImageField()
     status_de_adocao = models.BooleanField()
     raca = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.name
+        return self.nome
