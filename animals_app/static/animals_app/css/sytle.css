@@ -1,0 +1,71 @@
+:root {
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    
+}
+body{
+    font-family: var(--bs-font-monospace);
+ 
+}
+
+/*Menu da página */
+nav .itens{
+    display: flex;
+    flex-direction: row;
+    flex: content;
+    justify-content: flex-start;
+    margin-left: 35px;
+}
+
+nav .logo{
+    margin-left: 15px;
+
+}
+
+nav .itens a{
+    color: black;
+}
+
+nav .itens a:hover{
+    color: var(--bs-gray-100);
+}
+
+nav .login{
+    display: flex;
+    flex-direction: row;
+    flex: content;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+nav .login a{
+    color: black;
+}
+
+nav .login a:hover{
+    color: var(--bs-gray-100);
+
+}
+
+/*Container principal*/
+main div .container-principal{
+    background-color: var(--bs-gray-200);
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+}
+
+main div .texto-principal{
+    width: 500px;
+    padding: 100px;
+    color: black;
+}
+main div .imagem-principal .animal-estimacao{
+    width: 300px;
+    height: 300px;
+    margin-top: 40px;
+    margin-left: 270px;
+}
