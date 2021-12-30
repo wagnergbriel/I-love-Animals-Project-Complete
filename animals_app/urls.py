@@ -1,5 +1,7 @@
 from django.urls import path
+from animals_app import views
 
-urlpatters = [
-    path(),
+urlpatterns = [
+    path("", views.home, name="home"),
+    path("adocao/", views.adocao, name="adocao")
 ]
