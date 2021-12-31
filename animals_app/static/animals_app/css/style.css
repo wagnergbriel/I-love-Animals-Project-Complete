@@ -1,15 +1,20 @@
 :root {
-    --bs-gray-100: #f8f9fa;
-    --bs-gray-200: #e9ecef;
+    --amarelo-claro: #fcff54;
+    --azul-piscina: #4fd3ff;
+    --preto-acinzentado: #222121;
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     
 }
 body{
     font-family: var(--bs-font-monospace);
- 
 }
 
+/*Template Base*/
 /*Menu da página */
+header{
+    background:  var(--azul-piscina);
+}
+
 nav .itens{
     display: flex;
     flex-direction: row;
@@ -19,7 +24,10 @@ nav .itens{
 }
 
 nav .logo{
-    margin-left: 15px;
+    margin-left: 10px;
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
 
 }
 
@@ -28,7 +36,10 @@ nav .itens a{
 }
 
 nav .itens a:hover{
-    color: var(--bs-gray-100);
+    color: whitesmoke;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--preto-acinzentado);
 }
 
 nav .login{
@@ -39,18 +50,25 @@ nav .login{
     margin-right: 15px;
 }
 
-nav .login a{
+nav .login a:nth-child(1n+1){
+    border-radius: 8px;
+    margin-right: 3px;
     color: black;
+    padding: 15px;
+    background-color: var(--amarelo-claro);
+    margin: 5px;
+    text-decoration: none;
 }
 
 nav .login a:hover{
-    color: var(--bs-gray-100);
-
+    background-color: var(--preto-acinzentado);
+    color: whitesmoke;
 }
 
+/*Template Home*/
 /*Container principal*/
 main .container-principal{
-    background-color: var(--bs-gray-200);
+    background-color: var(--azul-piscina);
     height: 450px;
     display: flex;
     flex-direction: row;
@@ -59,13 +77,25 @@ main .container-principal{
 }
 
 main .texto-principal{
-    width: 500px;
+    width: 650px;
     padding: 100px;
     color: black;
 }
+
+main .texto-principal .titulo{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    font-weight: bold;
+}
 main .imagem-principal .animal-estimacao{
-    width: 300px;
-    height: 300px;
+    width: 390px;
+    height: 500px;
     margin-top: 40px;
     margin-left: 100px;
+}
+
+/*Rodapé*/
+footer{
+    height: 200px;
+    background-color: var(--preto-acinzentado);
 }
