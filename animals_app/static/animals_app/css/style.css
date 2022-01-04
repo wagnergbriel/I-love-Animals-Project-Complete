@@ -1,18 +1,20 @@
 :root {
-    --amarelo-claro: #fcff54;
+    --amarelo-claro: #f9fb8c;
     --azul-piscina: #4fd3ff;
     --preto-acinzentado: #222121;
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-font-monospace: 'Ubuntu','Inter', sans-serif;
     
 }
-body{
+*{
+    margin: 0;
+    padding: 0;
     font-family: var(--bs-font-monospace);
 }
 
 /*Template Base*/
 /*Menu da página */
 header{
-    background:  var(--azul-piscina);
+    background: var(--azul-piscina);
 }
 
 nav .itens{
@@ -26,7 +28,7 @@ nav .itens{
 nav .logo{
     margin-left: 10px;
     color: black;
-    font-family: Arial;
+    font-family: 'Licorice';
     font-weight: bold;
 
 }
@@ -37,9 +39,7 @@ nav .itens a{
 
 nav .itens a:hover{
     color: whitesmoke;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: var(--preto-acinzentado);
+    border-bottom: 3.5px solid var(--preto-acinzentado);
 }
 
 nav .login{
@@ -53,23 +53,26 @@ nav .login{
 nav .login a:nth-child(1n+1){
     border-radius: 8px;
     margin-right: 3px;
-    color: black;
+    color: whitesmoke;
     padding: 15px;
-    background-color: var(--amarelo-claro);
+    background-color: var(--preto-acinzentado);
     margin: 5px;
     text-decoration: none;
 }
 
 nav .login a:hover{
-    background-color: var(--preto-acinzentado);
-    color: whitesmoke;
+    background-color: whitesmoke;
+    color: var(--preto-acinzentado);
 }
 
 /*Template Home*/
 /*Container principal*/
+main{
+    background: linear-gradient(180deg, var(--azul-piscina) 0%, whitesmoke 100%);
+}
+
 main .container-principal{
-    background-color: var(--azul-piscina);
-    height: 450px;
+    height: 550px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -78,20 +81,74 @@ main .container-principal{
 
 main .texto-principal{
     width: 650px;
-    padding: 100px;
+    padding: 60px;
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 main .texto-principal .titulo{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     font-size: 60px;
     font-weight: bold;
 }
+main .texto-principal .descricao{
+    font-family: 'Ubuntu';
+    font-size: 20px;
+}
+
+main .texto-principal a{
+    border-radius: 8px;
+    color: whitesmoke;
+    padding: 15px;
+    background-color: var(--preto-acinzentado);
+    text-decoration: none;
+}
+
+main .texto-principal a:hover{
+    color: var(--preto-acinzentado);
+    background-color: whitesmoke;
+}
+
 main .imagem-principal .animal-estimacao{
-    width: 390px;
-    height: 500px;
-    margin-top: 40px;
-    margin-left: 100px;
+    width: 580px;
+    height: 410px;
+    margin-top: -30px;
+}
+
+/* Container Quem somos*/
+main .container-quem-somos{
+    height: 650px;
+}
+
+main .container-quem-somos .quem-somos{
+    color: black;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+main .container-quem-somos .quem-somos .titulo{
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+main .container-quem-somos .quem-somos .descricao{
+    font-family: 'Ubuntu';
+    font-size: 17px;
+    text-align: center;
+}
+
+main .container-quem-somos .quem-somos img{
+    width: 580px;
+    height: 410px;
+    margin-top: -50px;
 }
 
 /*Rodapé*/
