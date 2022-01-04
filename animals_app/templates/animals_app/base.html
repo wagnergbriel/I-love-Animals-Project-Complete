@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Licorice&family=Ubuntu:wght@400&display=swap" rel="stylesheet">
     <link activate rel="stylesheet" href="{% static 'animals_app/css/bootstrap.min.css' %}">
     <link activate rel="stylesheet" href="{% static 'animals_app/css/style.css' %}">
-    <title>{% block title %}I love Animals - Adoção de Animais{%endblock%}</title>
+    <title>{% block title %}{%endblock%}</title>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg justify-content-start">
-            <a class="navbar-brand logo" href="">I LOVE ANIMALS</a>
+            <h6 class="navbar-brand logo">I Love Animals</h6>
             <img class="d-inline-block align-text-top" src="{% static 'animals_app/img/animais-de-estimacao.png' %}" alt="logo-pagina" width="60" height="60">
             <div class="itens">
-                <a class="nav-link" href="{% url 'home' %}">Ínicio</a>
-                <a class="nav-link" href="#">Quem Somos</a>
+                <a class="nav-link" href="{% url 'home' %}">Início</a>
+                <a class="nav-link" href="#quem-somos">Quem Somos</a>
                 <a class="nav-link" href="{% url 'adocao' %}">Adoção</a>
                 <a class="nav-link" href="#">Contato</a>
             </div>
