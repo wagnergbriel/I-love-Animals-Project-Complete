@@ -134,7 +134,7 @@ main .container-quem-somos{
 main .container-quem-somos .quem-somos{
     color: whitesmoke;
     padding: 60px;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 main .container-quem-somos .quem-somos .titulo{
@@ -162,7 +162,7 @@ main .container-quem-somos .quem-somos .titulo-midias{
 main .container-quem-somos .img-quem-somos{
     width: 600px;
     height: 600px;
-    margin: 90px 50px 0 20px;
+    margin: 120px 50px 0 20px;
 }
 
 main .container-quem-somos .img-quem-somos img{
@@ -170,7 +170,7 @@ main .container-quem-somos .img-quem-somos img{
     border-radius: 10px;
 }
 
-/*Container Contato*/
+/*Container Adoção*/
 main .container-adocao{
     height: 550px;
 }
@@ -190,12 +190,9 @@ main .container-adocao .titulo{
 
 /*Rodapé*/
 footer{
-    height: 400px;
+    height: 350px;
     background-color: var(--preto-acinzentado);
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    justify-content: center;
+    color: whitesmoke;
 }
 
 footer .contato{
@@ -207,9 +204,8 @@ footer .contato{
 /*Logo*/
 
 footer .contato .logo{
-    display: flex;
-    flex-direction: row;
-    padding: 50px;
+   text-align: center;
+    padding: 50px 0 20px 0;
 }
 
 footer .contato .logo h6{
@@ -222,10 +218,8 @@ footer .contato .logo h6{
 /*icones*/
 
 /*footer .contato*/ .icones{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
 /*footer .contato*/ .icones a{
@@ -240,4 +234,17 @@ footer .contato .logo h6{
     background: whitesmoke;
     border-radius: 8px;
 
+}
+
+/*footer .contato*/ .fab:hover{
+    color: whitesmoke;
+    background: var(--preto-acinzentado);
+}
+
+/*Descrição rodapé*/
+footer .descricao{
+    padding: 18px;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
 }
