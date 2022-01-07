@@ -2,10 +2,11 @@
     --amarelo-claro: #f9fb8c;
     --azul-piscina: #4fd3ff;
     --preto-acinzentado: #222121;
-    --bs-font-monospace: 'Ubuntu','Inter', sans-serif;
-    
+    --bs-font-monospace: 'Ubuntu', 'Inter', sans-serif;
+
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: var(--bs-font-monospace);
@@ -13,11 +14,11 @@
 
 /*Template Base*/
 /*Menu da página */
-nav{
+nav {
     background: var(--azul-piscina);
 }
 
-nav .itens{
+nav .itens {
     display: flex;
     flex-direction: row;
     flex: content;
@@ -25,7 +26,7 @@ nav .itens{
     margin-left: 35px;
 }
 
-nav .logo{
+nav .logo {
     margin-left: 10px;
     color: black;
     font-family: 'Licorice';
@@ -34,18 +35,18 @@ nav .logo{
 
 }
 
-nav .itens a{
+nav .itens a {
     color: black;
 }
 
-nav .itens a:hover{
+nav .itens a:hover {
     color: whitesmoke;
     border-bottom: 3.5px solid var(--preto-acinzentado);
 }
 
 /*Login*/
 
-nav .login{
+nav .login {
     display: flex;
     flex-direction: row;
     flex: content;
@@ -53,7 +54,7 @@ nav .login{
     margin-right: 15px;
 }
 
-nav .login a:nth-child(1n+1){
+nav .login a:nth-child(1n+1) {
     border-radius: 8px;
     margin-right: 3px;
     color: whitesmoke;
@@ -63,18 +64,18 @@ nav .login a:nth-child(1n+1){
     text-decoration: none;
 }
 
-nav .login a:hover{
+nav .login a:hover {
     background-color: whitesmoke;
     color: var(--preto-acinzentado);
 }
 
 /*Template Home*/
 /*Container principal*/
-main{
+main {
     background: linear-gradient(180deg, var(--azul-piscina) 0%, whitesmoke 100%);
 }
 
-main .container-principal{
+main .container-principal {
     height: 550px;
     margin-top: 80px;
     display: flex;
@@ -83,7 +84,7 @@ main .container-principal{
     align-content: space-between;
 }
 
-main .texto-principal{
+main .texto-principal {
     width: 650px;
     padding: 60px;
     color: black;
@@ -92,17 +93,18 @@ main .texto-principal{
     align-items: flex-start;
 }
 
-main .texto-principal .titulo{
+main .texto-principal .titulo {
     font-family: sans-serif;
     font-size: 60px;
     font-weight: bold;
 }
-main .texto-principal .descricao{
+
+main .texto-principal .descricao {
     font-family: 'Ubuntu';
     font-size: 20px;
 }
 
-main .texto-principal a{
+main .texto-principal a {
     border-radius: 8px;
     color: whitesmoke;
     padding: 15px;
@@ -110,19 +112,19 @@ main .texto-principal a{
     text-decoration: none;
 }
 
-main .texto-principal a:hover{
+main .texto-principal a:hover {
     color: var(--preto-acinzentado);
     background-color: whitesmoke;
 }
 
-main .imagem-principal .animal-estimacao{
+main .imagem-principal .animal-estimacao {
     width: 580px;
     height: 410px;
     margin-top: -30px;
 }
 
 /* Container Quem somos*/
-main .container-quem-somos{
+main .container-quem-somos {
     height: 650px;
     display: flex;
     flex-direction: row-reverse;
@@ -131,13 +133,13 @@ main .container-quem-somos{
     background-color: var(--preto-acinzentado);
 }
 
-main .container-quem-somos .quem-somos{
+main .container-quem-somos .quem-somos {
     color: whitesmoke;
     padding: 60px;
     margin-top: 60px;
 }
 
-main .container-quem-somos .quem-somos .titulo{
+main .container-quem-somos .quem-somos .titulo {
     font-family: sans-serif;
     font-size: 50px;
     font-weight: bold;
@@ -145,13 +147,13 @@ main .container-quem-somos .quem-somos .titulo{
     text-align: center;
 }
 
-main .container-quem-somos .quem-somos .descricao{
+main .container-quem-somos .quem-somos .descricao {
     font-family: 'Ubuntu';
     font-size: 18px;
     text-align: center;
 }
 
-main .container-quem-somos .quem-somos .titulo-midias{
+main .container-quem-somos .quem-somos .titulo-midias {
     font-family: sans-serif;
     font-size: 20px;
     text-align: center;
@@ -159,28 +161,28 @@ main .container-quem-somos .quem-somos .titulo-midias{
     padding-top: 15px;
 }
 
-main .container-quem-somos .img-quem-somos{
+main .container-quem-somos .img-quem-somos {
     width: 600px;
     height: 600px;
     margin: 120px 50px 0 20px;
 }
 
-main .container-quem-somos .img-quem-somos img{
-    box-shadow:  16px 8px 5px black;
+main .container-quem-somos .img-quem-somos img {
+    box-shadow: 16px 8px 5px black;
     border-radius: 10px;
 }
 
 /*Container Adoção*/
-main .container-adocao{
+main .container-adocao {
     height: 550px;
 }
 
-main .container-adocao .adocao{
+main .container-adocao .adocao {
     color: var(--preto-acinzentado);
     padding-top: 80px;
 }
 
-main .container-adocao .titulo{
+main .container-adocao .titulo {
     font-family: sans-serif;
     font-size: 50px;
     font-weight: bold;
@@ -189,13 +191,13 @@ main .container-adocao .titulo{
 }
 
 /*Rodapé*/
-footer{
+footer {
     height: 350px;
     background-color: var(--preto-acinzentado);
     color: whitesmoke;
 }
 
-footer .contato{
+footer .contato {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -203,12 +205,12 @@ footer .contato{
 
 /*Logo*/
 
-footer .contato .logo{
-   text-align: center;
+footer .contato .logo {
+    text-align: center;
     padding: 50px 0 20px 0;
 }
 
-footer .contato .logo h6{
+footer .contato .logo h6 {
     color: whitesmoke;
     font-family: 'Licorice';
     font-size: 30px;
@@ -217,18 +219,21 @@ footer .contato .logo h6{
 
 /*icones*/
 
-/*footer .contato*/ .icones{
+/*footer .contato*/
+.icones {
     text-align: center;
     padding-bottom: 15px;
 }
 
-/*footer .contato*/ .icones a{
+/*footer .contato*/
+.icones a {
     padding: 15px;
     text-decoration: none;
     color: whitesmoke;
 }
 
-/*footer .contato*/ .fab{
+/*footer .contato*/
+.fab {
     padding: 5px;
     color: var(--preto-acinzentado);
     background: whitesmoke;
@@ -236,13 +241,14 @@ footer .contato .logo h6{
 
 }
 
-/*footer .contato*/ .fab:hover{
+/*footer .contato*/
+.fab:hover {
     color: whitesmoke;
     background: var(--preto-acinzentado);
 }
 
 /*Descrição rodapé*/
-footer .descricao{
+footer .descricao {
     padding: 18px;
     color: whitesmoke;
     font-weight: bold;
