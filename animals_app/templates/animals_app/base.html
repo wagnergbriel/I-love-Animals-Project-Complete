@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -7,17 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Licorice&family=Ubuntu:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Licorice&family=Ubuntu:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link activate rel="stylesheet" href="{% static 'animals_app/css/bootstrap.min.css' %}">
     <link activate rel="stylesheet" href="{% static 'animals_app/css/style.css' %}">
     <link rel="icon" href="{% static 'animals_app/img/animais-de-estimacao.png' %}" type="image/x-icon">
     <title>{% block title %}{%endblock%}</title>
 </head>
+
 <body>
     <header id="inicio">
         <nav class="navbar navbar-expand-lg justify-content-start fixed-top">
-            <a class="nav-link" href=""><h6 class="logo">I Love Animals</h6></a>
+            <a class="nav-link" href="">
+                <h6 class="logo">I Love Animals</h6>
+            </a>
             <img src="{% static 'animals_app/img/animais-de-estimacao.png' %}" alt="logo-pagina" width="60" height="60">
             <div class="itens">
                 <a class="nav-link" href="#inicio">Início</a>
@@ -33,4 +40,5 @@
     {% block content %}
     {% endblock %}
 </body>
+
 </html>

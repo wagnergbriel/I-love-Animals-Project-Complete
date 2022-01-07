@@ -1,72 +1,77 @@
 {% extends "animals_app/base.html" %}
 {% block title%}
-    I Love Animals - Adoção de Animais
+I Love Animals - Adoção de Animais
 {%endblock%}
 {% block content %}
 {% load static %}
-    <main>
-        <section class="container-fluid container-principal">
-            <div class="texto-principal">
-                <h4 class="titulo">Encontre um lar para seu amiguinho 🐾</h4><br>
-                <p class="descricao">Somos uma plataforma voluntária com objetivo de divulgar adoções de animais abandonados.
-                    <br>Faça parte desse projeto! 
-                </p>
-                <br>
-                <a href="">Seja um colaborador</a>
-            </div>
-            <figure class="imagem-principal">
-                <img class="animal-estimacao" src="{% static 'animals_app/img/foto01.png' %}" alt="animais-de-estimacao">
-            </figure>
-        </section>
-        <section class="container-fluid container-quem-somos" id="quem-somos">
-            <div class="quem-somos">
-                <h4 class="titulo">Quem somos</h4>
-                <p class="descricao">
-                    É comum pessoas hoje em dia adotarem animais em situações de rua ou até mesmo animais que outras pessoas não tem condições de manter com os custos e cuidados, 
-                    uma das dificuldades é ter acesso a informações sobre adoção de animais, muitos abrigos de animais são desconhecidos e também não tem canais de divulgação.
-                    I Love Animals providencia gratuitamente a divulgação de animais para adoção e qualquer pessoa ou instituição poderá se cadastrar e divulgar os animais 
-                    que estão disponíveis juntamente com os dados necessários para a pessoa interessada entrar em contato.
-                </p>
-                <h5 class="titulo-midias">Acesse nossas mídias sociais para mais informações:</h5>
-                <div class="icones">
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-youtube"></i></a>
-                    <a href=""><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            <div class="img-quem-somos">  
-                <img src="{% static 'animals_app/img/foto03.jpg'%}" alt="img-quem-somos">
-            </div>
-        </section>
-        <section class="container-fluid container-adocao" id="adocao">
-            <div class="adocao">
-                <h4 class="titulo">Adoção</h4>
-                <div class="botao-adocao">
-                    <a href="">Adotar cães</a>
-                    <a href="">Adotar gatos</a>
-                </div>
-                <div class="grid-animais-adocao">
-
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="container-fluid rodape">
-        <section class="contato">
-            <div class="logo">
-                <h6 class="nav-link">I Love Animals</h6>
-                <img src="{% static 'animals_app/img/animais-de-estimacao.png' %}" alt="logo-pagina" width="60" height="60">
-            </div>
+<main>
+    <section class="container-fluid container-principal">
+        <div class="texto-principal">
+            <h4 class="titulo">Encontre um lar para seu amiguinho 🐾</h4><br>
+            <p class="descricao">Somos uma plataforma voluntária com objetivo de divulgar adoções de animais
+                abandonados.
+                <br>Faça parte desse projeto!
+            </p>
+            <br>
+            <a href="">Seja um colaborador</a>
+        </div>
+        <figure class="imagem-principal">
+            <img class="animal-estimacao" src="{% static 'animals_app/img/foto01.png' %}" alt="animais-de-estimacao">
+        </figure>
+    </section>
+    <section class="container-fluid container-quem-somos" id="quem-somos">
+        <div class="quem-somos">
+            <h4 class="titulo">Quem somos</h4>
+            <p class="descricao">
+                É comum pessoas hoje em dia adotarem animais em situações de rua ou até mesmo animais que outras pessoas
+                não tem condições de manter com os custos e cuidados,
+                uma das dificuldades é ter acesso a informações sobre adoção de animais, muitos abrigos de animais são
+                desconhecidos e também não tem canais de divulgação.
+                I Love Animals providencia gratuitamente a divulgação de animais para adoção e qualquer pessoa ou
+                instituição poderá se cadastrar e divulgar os animais
+                que estão disponíveis juntamente com os dados necessários para a pessoa interessada entrar em contato.
+            </p>
+            <h5 class="titulo-midias">Acesse nossas mídias sociais para mais informações:</h5>
             <div class="icones">
                 <a href=""><i class="fab fa-instagram"></i></a>
                 <a href=""><i class="fab fa-youtube"></i></a>
                 <a href=""><i class="fab fa-facebook"></i></a>
                 <a href=""><i class="fab fa-whatsapp"></i></a>
             </div>
-            <div class="descricao">
-                <p>© Copyright 2022 por Wagner Gabriel. Todos os direitos reservados. <a href="https://github.com/wagnergbriel"><i class="fab fa-github"></i></a></p>
+        </div>
+        <div class="img-quem-somos">
+            <img src="{% static 'animals_app/img/foto03.jpg'%}" alt="img-quem-somos">
+        </div>
+    </section>
+    <section class="container-fluid container-adocao" id="adocao">
+        <div class="adocao">
+            <h4 class="titulo">Adoção</h4>
+            <div class="botao-adocao">
+                <a href="">Adotar cães</a>
+                <a href="">Adotar gatos</a>
             </div>
-        </section>
-    </footer>
+            <div class="grid-animais-adocao">
+
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="container-fluid rodape">
+    <section class="contato">
+        <div class="logo">
+            <h6 class="nav-link">I Love Animals</h6>
+            <img src="{% static 'animals_app/img/animais-de-estimacao.png' %}" alt="logo-pagina" width="60" height="60">
+        </div>
+        <div class="icones">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="descricao">
+            <p>© Copyright 2022 por Wagner Gabriel. Todos os direitos reservados. <a
+                    href="https://github.com/wagnergbriel"><i class="fab fa-github"></i></a></p>
+        </div>
+    </section>
+</footer>
 {% endblock %}
