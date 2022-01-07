@@ -6,7 +6,8 @@ I Love Animals - Adoção de Animais
 {% load static %}
 <main>
     <section class="container-fluid container-principal">
-        <div class="texto-principal">
+        <!--Reutilizando a classe login para reaproveitar a estilização do botão-->
+        <div class="texto-principal login">
             <h4 class="titulo">Encontre um lar para seu amiguinho 🐾</h4><br>
             <p class="descricao">Somos uma plataforma voluntária com objetivo de divulgar adoções de animais
                 abandonados.
@@ -32,6 +33,7 @@ I Love Animals - Adoção de Animais
                 que estão disponíveis juntamente com os dados necessários para a pessoa interessada entrar em contato.
             </p>
             <h5 class="titulo-midias">Acesse nossas mídias sociais para mais informações:</h5>
+            <!--Reutilizando a classe icones para reaproveitar a estilização dos botões-->
             <div class="icones">
                 <a href=""><em class="fab fa-instagram"></em></a>
                 <a href=""><em class="fab fa-youtube"></em></a>
@@ -46,12 +48,72 @@ I Love Animals - Adoção de Animais
     <section class="container-fluid container-adocao" id="adocao">
         <div class="adocao">
             <h4 class="titulo">Adoção</h4>
-            <div class="botao-adocao">
+            <!--Reutilizando a classe login para reaproveitar a estilização dos botões-->
+            <div class="botao-adocao login">
                 <a href="">Adotar cães</a>
                 <a href="">Adotar gatos</a>
             </div>
-            <div class="grid-animais-adocao">
-
+            <div class="row grid-animais-adocao">
+                <!--Card de cães-->
+                <div class="card text-white bg-dark">
+                    <img class="card-img-top" src="{% static 'animals_app/img/foto02.jpg'%}" alt="">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h5 class="card-title">Titulo</h5>
+                            <p class="card-text">Descrição</p>
+                            <a class="btn btn-primary" href="">botão</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark">
+                    <img class="card-img-top" src="{% static 'animals_app/img/foto03.jpg'%}" alt="">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h5 class="card-title">Titulo</h5>
+                            <p class="card-text">Descrição</p>
+                            <a class="btn btn-primary" href="">botão</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark">
+                    <img class="card-img-top" src="{% static 'animals_app/img/foto03.jpg'%}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo</h5>
+                        <p class="card-text">Descrição</p>
+                        <a class="btn btn-primary" href="">botão</a>
+                    </div>
+                </div>
+                <!--Card de gatos-->
+                <div class="card text-white bg-dark">
+                    <img class="card-img-top" src="{% static 'animals_app/img/foto03.jpg'%}" alt="">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h5 class="card-title">Titulo</h5>
+                            <p class="card-text">Descrição</p>
+                            <a class="btn btn-primary" href="">botão</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark">
+                    <img class="card-img-top" src="{% static 'animals_app/img/foto03.jpg'%}" alt="">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h5 class="card-title">Titulo</h5>
+                            <p class="card-text">Descrição</p>
+                            <a class="btn btn-primary" href="">botão</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark">
+                    <img class="card-img-top" src="{% static 'animals_app/img/foto03.jpg'%}" alt="">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h5 class="card-title">Titulo</h5>
+                            <p class="card-text">Descrição</p>
+                            <a class="btn btn-primary" href="">botão</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
