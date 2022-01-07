@@ -190,7 +190,7 @@ main .container-adocao .titulo {
     text-align: center;
 }
 
-/*Rodapé*/
+/*Container Rodapé*/
 footer {
     height: 350px;
     background-color: var(--preto-acinzentado);
@@ -250,7 +250,6 @@ footer .contato .logo h6 {
 /*Descrição rodapé*/
 footer .descricao {
     padding: 18px;
-    color: whitesmoke;
-    font-weight: bold;
     text-align: center;
+    font-size: 15px;
 }
