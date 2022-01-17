@@ -6,3 +6,6 @@ def home(request):
 
 def adocao():
     pass
+
+def login(request):
+    return render(request, "animals_app/login.html")
