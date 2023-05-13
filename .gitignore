@@ -104,6 +104,8 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+.pg_service.conf
+.my_pgpass
 .env
 .venv
 env/

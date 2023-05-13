@@ -2,3 +2,5 @@ Django==3.2.3
 pyUFbr==0.1.0
 python-dotenv==0.19.2
 pre-commit==2.16.0
+psycopg2
+psycopg2-binary
