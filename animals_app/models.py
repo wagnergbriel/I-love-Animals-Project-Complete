@@ -11,13 +11,13 @@ class Colaborador(models.Model):
         CNPJ = "CNPJ"
 
     """Campos da Classe colaborador"""
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id_colaborador = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     nome = models.CharField(max_length=200)
     numero_celular = models.CharField(max_length=14)
     email = models.EmailField()
     senha = models.CharField(max_length=12)
     tipo_identificacao_pessoal = models.CharField(
-        max_length=10, choices=TipoIdentificacaoPessoal.choices, default="CNPJ"
+        max_length=14, choices=TipoIdentificacaoPessoal.choices, default="CNPJ"
     )
     identificador_pessoal = models.CharField(max_length=14)
     endereco = models.CharField(max_length=200)
@@ -41,7 +41,7 @@ class Animais(models.Model):
         CAT = "cat"
         DOG = "dog"
 
-    """Caampos da Classe animais"""
+    """Campos da Classe animais"""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     colaborador = models.ForeignKey("Colaborador", on_delete=models.PROTECT)
     tipo_animal = models.CharField(max_length=50, choices=TipoAnimais.choices)
